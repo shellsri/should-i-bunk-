@@ -1,4 +1,4 @@
-🎓 Should I Bunk?
+🎓 Should I Bunk? live link:https://vercel.com/shellsris-projects/should-i-bunk
 
 A full-stack academic productivity dashboard that helps students track attendance, deadlines, and overall academic health — and decide whether it’s safe to bunk a class or not 😉
 
