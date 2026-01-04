@@ -5,7 +5,7 @@ function AcademicHealth() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/health")
+    fetch("https://should-i-bunk-backend-79vs.onrender.com/api/health")
       .then(res => res.json())
       .then(setData);
   }, []);

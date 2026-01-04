@@ -9,7 +9,7 @@ function Subjects() {
   const [editingId, setEditingId] = useState(null);
 
   const fetchSubjects = async () => {
-    const res = await fetch("http://localhost:5000/api/subjects");
+    const res = await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/subjects");
     const data = await res.json();
     setSubjects(data);
   };
@@ -29,13 +29,13 @@ function Subjects() {
     };
 
     if (editingId) {
-      await fetch(`http://localhost:5000/api/subjects/${editingId}`, {
+      await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/subjects/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
     } else {
-      await fetch("http://localhost:5000/api/subjects", {
+      await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/subjects", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -47,7 +47,7 @@ function Subjects() {
   };
 
   const deleteSubject = async (id) => {
-    await fetch(`http://localhost:5000/api/subjects/${id}`, {
+    await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/subjects/${id}`, {
       method: "DELETE",
     });
     fetchSubjects();

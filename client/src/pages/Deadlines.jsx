@@ -11,7 +11,7 @@ function Deadlines() {
 
   /* ---------------- FETCH ---------------- */
   const fetchDeadlines = async () => {
-    const res = await fetch("http://localhost:5000/api/deadlines");
+    const res = await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/deadlines");
     const data = await res.json();
     setDeadlines(data);
   };
@@ -27,13 +27,13 @@ function Deadlines() {
     const payload = { title, subject, date, priority };
 
     if (editingId) {
-      await fetch(`http://localhost:5000/api/deadlines/${editingId}`, {
+      await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/deadlines/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
     } else {
-      await fetch("http://localhost:5000/api/deadlines", {
+      await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/deadlines", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -54,14 +54,14 @@ function Deadlines() {
   };
 
   const deleteDeadline = async (id) => {
-    await fetch(`http://localhost:5000/api/deadlines/${id}`, {
+    await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/deadlines/${id}`, {
       method: "DELETE",
     });
     fetchDeadlines();
   };
 
   const toggleComplete = async (d) => {
-    await fetch(`http://localhost:5000/api/deadlines/${d._id}`, {
+    await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/deadlines/${d._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...d, completed: !d.completed }),

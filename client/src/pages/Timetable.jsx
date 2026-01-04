@@ -19,7 +19,7 @@ function Timetable() {
   const [editingSlot, setEditingSlot] = useState(null);
 
   const fetchTimetable = async () => {
-    const res = await fetch("http://localhost:5000/api/timetable");
+    const res = await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/timetable");
     const data = await res.json();
     setTimetable(data);
   };
@@ -31,7 +31,7 @@ function Timetable() {
   const addSlot = async () => {
     if (!time || !subject) return;
 
-    await fetch("http://localhost:5000/api/timetable", {
+    await fetch("https://should-i-bunk-backend-79vs.onrender.com/api/timetable", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ day, time, subject }),
@@ -42,7 +42,7 @@ function Timetable() {
   };
 
   const deleteSlot = async (slotId) => {
-    await fetch(`http://localhost:5000/api/timetable/slot/${slotId}`, {
+    await fetch(`https://should-i-bunk-backend-79vs.onrender.com/api/timetable/slot/${slotId}`, {
       method: "DELETE",
     });
     fetchTimetable();
@@ -56,7 +56,7 @@ function Timetable() {
 
   const updateSlot = async () => {
     await fetch(
-      `http://localhost:5000/api/timetable/slot/${editingSlot}`,
+      `https://should-i-bunk-backend-79vs.onrender.com/api/timetable/slot/${editingSlot}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
