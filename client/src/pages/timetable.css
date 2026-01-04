@@ -1,0 +1,126 @@
+.timetable-page {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 24px;
+}
+
+/* LEFT */
+.week-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.page-title {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+}
+
+.day-card {
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.day-card h3 {
+  margin-bottom: 10px;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #020617;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+.empty {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* RIGHT */
+.add-panel {
+  position: sticky;
+  top: 20px;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 16px;
+  height: fit-content;
+}
+
+.add-panel h2 {
+  margin-bottom: 14px;
+}
+
+.add-panel input,
+.add-panel select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+.add-panel button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== ACTION BUTTONS (UPDATED) ===== */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Base */
+.action-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Edit */
+.action-btn.edit {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+  color: #c7d2fe;
+}
+
+.action-btn.edit:hover {
+  background: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.45);
+}
+
+/* Delete */
+.action-btn.delete {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #fecaca;
+}
+
+.action-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.25);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.45);
+}
+

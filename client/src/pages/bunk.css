@@ -1,0 +1,75 @@
+.bunk-page {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* MAIN DECISION CARD */
+.decision-card {
+  background: linear-gradient(145deg, #020617, #020617cc);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.decision-text {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.decision-desc {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* CONFIDENCE BADGE */
+.confidence {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.conf-low {
+  background: #334155;
+  color: #e5e7eb;
+}
+
+.conf-medium {
+  background: #facc15;
+  color: #020617;
+}
+
+.conf-high {
+  background: #22c55e;
+  color: #020617;
+}
+
+/* INSIGHTS */
+.insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.insight-card {
+  background: #020617cc;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 14px;
+  color: #e5e7eb;
+  border: 1px solid #1e293b;
+}
+
+/* TIP */
+.bunk-tip {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #cbd5f5;
+  opacity: 0.9;
+}
